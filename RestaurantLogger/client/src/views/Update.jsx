@@ -20,7 +20,7 @@ export default props => {
     const updateRestaurant = restaurant => {
         axios.put('http://localhost:8000/api/restaurant/' + id, restaurant)
             // .then(res => console.log(res))
-            .then(navigate("/"));
+            .then(navigate("/restaurant/"));
     }
     return(
         <div>
@@ -34,7 +34,6 @@ export default props => {
                         initialDescription={restaurant.description}
                         initialFoodType={restaurant.foodType}
                     />
-                    <DeleteButton restaurantId={restaurant._id} successCallback={()=> navigate("/")} />
                 </>
             )}
         </div>

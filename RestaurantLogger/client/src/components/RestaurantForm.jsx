@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { navigate } from '@reach/router';
+import { Button } from '@material-ui/core';
 
 export default props => {
     const {initialName, initialLocation, initialDescription, initialFoodType, onSubmitProp} = props;
@@ -11,10 +12,16 @@ export default props => {
     const onSubmitHandler = e => {
         e.preventDefault();
         onSubmitProp({name, location, description, foodType});
-        navigate("/")
+        navigate("/restaurant")
+    }
+
+    const onClickHandler = e =>{
+        e.preventDefault();
+        navigate("/restaurant")
     }
 
     return(
+        <>
         <form onSubmit={onSubmitHandler}>
             <p>
                 <label>Name:</label><br/>
@@ -46,5 +53,7 @@ export default props => {
             </p>
             <input type="submit"/>
         </form>
+        <Button variant="contained" color="default" onClick={onClickHandler}>Cancel</Button>
+        </>
     )
 }

@@ -9,8 +9,7 @@ import {
     TableRow,
     TableHead,
     TableBody,
-    Button,
-    Tab
+    Button
 } from '@material-ui/core';
 
 export default props => {
