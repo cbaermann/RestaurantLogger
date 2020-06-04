@@ -5,12 +5,14 @@ import './App.css';
 import Main from './views/Main';
 import New from './views/New';
 import Update from './views/Update';
+import Landing from './views/Landing';
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Main path="/"/>
+        <Landing path="/" />
+        <Main path="/restaurant"/>
         <New path="/new" />
         <Update path="/restaurant/:id/edit" />
       </Router>
