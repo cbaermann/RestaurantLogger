@@ -2,15 +2,40 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from '@reach/router';
 import DeleteButton from './DeleteButton';
-
+import { withStyles, makeStyles } from '@material-ui/core/styles';
 import {
     Table,
     TableCell,
     TableRow,
     TableHead,
     TableBody,
-    Button
+    Button,
+    Paper,
+    TableContainer
 } from '@material-ui/core';
+
+const StyledTableCell = withStyles((theme) => ({
+    head: {
+      backgroundColor: theme.palette.common.black,
+      color: theme.palette.common.white,
+    },
+    body: {
+      fontSize: 14,
+    },
+  }))(TableCell);
+  
+  const StyledTableRow = withStyles((theme) => ({
+    root: {
+      '&:nth-of-type(odd)': {
+        backgroundColor: theme.palette.action.hover,
+      },
+    },
+  }))(TableRow);
+  const useStyles = makeStyles({
+    table: {
+      minWidth: 700,
+    },
+  });
 
 export default props => {
     const [ restaurant, setRestaurant] = useState([]);
@@ -24,37 +49,44 @@ export default props => {
         setRestaurant(restaurant.filter(restaurant => restaurant._id != restaurantId))
     }
 
+    const classes = useStyles();
+
+
+
+
     return(
         <div>
-            <Table stickyHeader>
+            <TableContainer component={Paper}>
+            <Table className={classes.table}>
                 <TableHead>
                     <TableRow>
-                        <TableCell>Name</TableCell>
-                        <TableCell>Location</TableCell>
-                        <TableCell>Food Type</TableCell>
-                        <TableCell>Actions</TableCell>
+                        <StyledTableCell>Name</StyledTableCell>
+                        <StyledTableCell>Location</StyledTableCell>
+                        <StyledTableCell>Food Type</StyledTableCell>
+                        <StyledTableCell>Actions</StyledTableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
                     {restaurant.map((restaurant, idx)=> {
                         return(
-                            <TableRow>
+                            <StyledTableRow>
                                 <>
-                                <TableCell key={idx}>{restaurant.name}</TableCell>
+                                <StyledTableCell key={idx}>{restaurant.name}</StyledTableCell>
 
-                                <TableCell key={idx}>{restaurant.location}</TableCell>
+                                <StyledTableCell key={idx}>{restaurant.location}</StyledTableCell>
 
-                                <TableCell key={idx}>{restaurant.foodType}</TableCell>
+                                <StyledTableCell key={idx}>{restaurant.foodType}</StyledTableCell>
 
-                                <TableCell><Link to={"/restaurant/" + restaurant._id + "/edit"}><Button color="primary"
+                                <StyledTableCell><Link to={"/restaurant/" + restaurant._id + "/edit"}><Button color="primary"
                                 variant="contained"
-                                size="small">Edit</Button></Link><DeleteButton restaurantId={restaurant._id} successCallback={()=>removeFromDom(restaurant._id)}></DeleteButton></TableCell>
+                                size="small">Edit</Button></Link><DeleteButton restaurantId={restaurant._id} successCallback={()=>removeFromDom(restaurant._id)}></DeleteButton></StyledTableCell>
                                 </>
-                            </TableRow>
+                            </StyledTableRow>
                         )
                     })}
                 </TableBody>
             </Table>
+            </TableContainer>
         </div>
     )
 }
