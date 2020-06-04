@@ -10,7 +10,7 @@ export default () => {
         axios.post('http://localhost:8000/api/restaurant', resturants)
             .then(res=> {
                 setRestaurant([...restaurant, res.data]);
-                navigate("/");
+                navigate("/restaurant");
             })
     }
 
