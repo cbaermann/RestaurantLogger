@@ -20,15 +20,16 @@ const styles = {
 }
 
 export default props => {
-    const {initialName, initialLocation, initialDescription, initialFoodType, onSubmitProp} = props;
+    const {initialName, initialLocation, initialDescription, initialFoodType, initialPriceRange, onSubmitProp} = props;
     const[name, setName] = useState(initialName);
     const[location, setLocation] = useState(initialLocation);
     const[description, setDescription] = useState(initialDescription);
     const[foodType, setFoodType] = useState(initialFoodType);
+    const[priceRange, setPriceRange] = useState(initialPriceRange)
 
     const onSubmitHandler = e => {
         e.preventDefault();
-        onSubmitProp({name, location, description, foodType});
+        onSubmitProp({name, location, description, foodType, priceRange});
         navigate("/restaurant")
     }
 
@@ -68,6 +69,13 @@ export default props => {
                         type="text"
                         name="foodType" value={foodType}
                         onChange={(e)=>{setFoodType(e.target.value) }}/>
+                </FormControl><br/>
+                <FormControl variant="outlined" style={styles.input}>
+                    <InputLabel>Price Range:</InputLabel><br/>
+                    <OutlinedInput
+                        type="text"
+                        name="priceRange" value={priceRange}
+                        onChange={(e)=>{setPriceRange(e.target.value) }}/>
                 </FormControl><br/><br/>
                 <Button color="secondary" variant="contained" onClick={onClickHandler}>Cancel</Button>
                 <Button type="submit" variant="contained" color="primary">Submit</Button>

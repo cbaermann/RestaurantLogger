@@ -5,6 +5,7 @@ const RestaurantSchema = new mongoose.Schema({
     location: {type: String},
     description: {type: String},
     foodType: {type: String},
+    priceRange: {type: String},
 }, {timestamps: true});
 
 module.exports.Restaurant = mongoose.model("Restaurant", RestaurantSchema);

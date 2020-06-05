@@ -33,6 +33,7 @@ export default props => {
                         initialLocation={restaurant.location}
                         initialDescription={restaurant.description}
                         initialFoodType={restaurant.foodType}
+                        initialPriceRange={restaurant.priceRange}
                     />
                 </>
             )}

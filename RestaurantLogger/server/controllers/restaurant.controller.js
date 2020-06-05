@@ -7,12 +7,13 @@ module.exports.index = (request, response) => {
 }
 
 module.exports.createRestaurant = (request, response) => {
-    const { name, location, description, foodType}  = request.body;
+    const { name, location, description, foodType, priceRange}  = request.body;
     Restaurant.create({
         name, 
         location,
         description,
         foodType,
+        priceRange,
     })
     .then(restaurant=>response.json(restaurant))
     .catch(err=>response.json(err))

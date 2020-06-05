@@ -20,6 +20,7 @@ export default props => {
             <p>Location: {restaurant.location}</p>
             <p>Description: {restaurant.description}</p>
             <p>Food Type: {restaurant.foodType}</p>
+            <p>Price Range: {restaurant.priceRange}</p>
 
             <button onClick={onClickHandler}>Back to main page</button>
         </div>

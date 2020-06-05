@@ -69,6 +69,7 @@ export default props => {
                         <StyledTableCell>Name</StyledTableCell>
                         <StyledTableCell>Location</StyledTableCell>
                         <StyledTableCell>Food Type</StyledTableCell>
+                        <StyledTableCell>Price Range</StyledTableCell>
                         <StyledTableCell>Actions</StyledTableCell>
                     </TableRow>
                 </TableHead>
@@ -82,6 +83,8 @@ export default props => {
                                 <StyledTableCell key={idx}>{restaurant.location}</StyledTableCell>
 
                                 <StyledTableCell key={idx}>{restaurant.foodType}</StyledTableCell>
+
+                                <StyledTableCell key={idx}>{restaurant.priceRange}</StyledTableCell>
 
                                 <StyledTableCell>
                                     <Button style={styles.buttonMargin}color="primary" variant="contained" size="small" href={"/restaurant/" + restaurant._id + "/edit"}>Edit</Button>
