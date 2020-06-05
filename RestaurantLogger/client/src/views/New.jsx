@@ -21,7 +21,8 @@ export default () => {
             initialName=""
             initialLocation=""
             initialDescription=""
-            initialFoodType="" />
+            initialFoodType=""
+            initialPriceRange=""/>
         </div>
     )
 }
