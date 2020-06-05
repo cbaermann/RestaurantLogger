@@ -3,10 +3,14 @@ import axios from 'axios';
 import { Button } from '@material-ui/core';
 import RestaurantList from '../components/RestaurantList';
 
+import '../style/MainStyle.css'
+
 
 const styles = {
     addButton: {
-        backgroundColor: "hotPink"
+        backgroundColor: "#408a24",
+        marginBottom: "1rem",
+        marginTop: "1rem"
     }
 }
 
@@ -27,10 +31,9 @@ export default() => {
     }
 
     return(
-        <div>
+        <div className="mainContainer">
             <h1>Your Favorite Restaurants</h1>
-            {/* <a href="/new">Add a new restaurant</a> */}
-            <Button style={styles.addButton} variant="contained" href='/new'>Add a new restaurant</Button>
+            <Button className="newRestaurantButton" style={styles.addButton} variant="contained" href='/new'>Add a new restaurant</Button>
             {loaded && <RestaurantList restaurant={restaurant} removeFromDom={removeFromDom} />}
         </div>
     )

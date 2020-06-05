@@ -40,7 +40,11 @@ const useStyles = makeStyles({
 const styles = {
     buttonMargin: {
         marginRight: "1rem"
-    }
+    },
+
+    tableCellStyle: {
+        opacity: "85%"
+        }
 }
 
 export default props => {
@@ -62,7 +66,7 @@ export default props => {
 
     return(
         <div>
-            <TableContainer component={Paper}>
+            <TableContainer style={styles.tableCellStyle} component={Paper}>
             <Table className={classes.table}>
                 <TableHead>
                     <TableRow>
