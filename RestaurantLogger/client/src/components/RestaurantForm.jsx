@@ -51,9 +51,11 @@ export default props => {
     return(
         <>
         <Paper elevation={3} style={styles.paper} style={styles.topInput}>
+            <br/>
             <form onSubmit={onSubmitHandler} style={styles.topInput}>
                 <FormControl variant="outlined" style={styles.input}>
                     <InputLabel>Name:</InputLabel>
+                    <br/>
                     <OutlinedInput
                         type="text"
                         name="name" value={name}
@@ -109,7 +111,6 @@ export default props => {
                 </FormControl><br/><br/>
                 <Button color="secondary" variant="contained" onClick={onClickHandler}>Cancel</Button>
                 <Button type="submit" variant="contained" color="primary">Submit</Button><br/><br/><br/>
-
             </form>
         </Paper>
         </>
