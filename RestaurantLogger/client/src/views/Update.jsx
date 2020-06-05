@@ -24,7 +24,7 @@ export default props => {
     }
     return(
         <div>
-            <h1>Update a Restaurant</h1>
+            <h1>Update a Restaurant</h1><br/><br/>
             {loaded && (
                 <>
                     <RestaurantForm
