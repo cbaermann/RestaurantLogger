@@ -77,7 +77,7 @@ export default props => {
                         return(
                             <StyledTableRow>
                                 <>
-                                <StyledTableCell key={idx}>{restaurant.name}</StyledTableCell>
+                                <StyledTableCell key={idx}><Link to={"/restaurant/" + restaurant._id}>{restaurant.name}</Link></StyledTableCell>
 
                                 <StyledTableCell key={idx}>{restaurant.location}</StyledTableCell>
 
