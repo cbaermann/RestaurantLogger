@@ -11,7 +11,8 @@ import { Button,
 
 const styles = {
     input: {
-        marginBottom: "1rem"
+        marginBottom: "1rem",
+        width: "250px"
     },
     paper: {
         padding: "1rem"
@@ -20,11 +21,11 @@ const styles = {
         marginTop: "1rem"
     },
     foodTypeWidth: {
-        width: "200px",
+        // width: "200px",
     },
     priceRangeWidth: {
         marginTop: "1rem",
-        width: "200px"
+        // width: "200px"
     }
 }
 
@@ -72,7 +73,7 @@ export default props => {
                         name="description" value={description}
                         onChange={(e)=>{setDescription(e.target.value) }}/>
                 </FormControl><br/>
-                <FormControl variant="outlined" style={styles.input} style={styles.foodTypeWidth}>
+                <FormControl variant="outlined" style={styles.input}>
                     <InputLabel>FoodType:</InputLabel><br/>
                     <Select name="foodType" value={foodType}
                         onChange={(e)=>{setFoodType(e.target.value)}}>
@@ -92,7 +93,7 @@ export default props => {
                         name="foodType" value={foodType}
                         onChange={(e)=>{setFoodType(e.target.value) }}/> */}
                 </FormControl><br/>
-                <FormControl variant="outlined" style={styles.input} style={styles.priceRangeWidth}>
+                <FormControl variant="outlined" style={styles.input}>
                     <InputLabel>Price Range:</InputLabel><br/>
                     
                     <Select name="priceRange" value={priceRange}
