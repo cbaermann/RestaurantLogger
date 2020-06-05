@@ -74,38 +74,6 @@ export default props => {
 
             </form>
         </Paper>
-        {/* <form onSubmit={onSubmitHandler}>
-            <p>
-                <label>Name:</label><br/>
-                <input
-                    type="text"
-                    name="name" value={name}
-                    onChange={(e)=>{setName(e.target.value) }}/>
-            </p>
-            <p>
-                <label>Location:</label><br/>
-                <input
-                    type="text"
-                    name="location" value={location}
-                    onChange={(e)=>{setLocation(e.target.value) }}/>
-            </p>
-            <p>
-                <label>Description:</label><br/>
-                <input
-                    type="text"
-                    name="description" value={description}
-                    onChange={(e)=>{setDescription(e.target.value) }}/>
-            </p>
-            <p>
-                <label>Food Type:</label><br/>
-                <input
-                    type="text"
-                    name="foodType" value={foodType}
-                    onChange={(e)=>{setFoodType(e.target.value) }}/>
-            </p>
-            <input type="submit"/>
-        </form>
-        <Button variant="contained" color="default" onClick={onClickHandler}>Cancel</Button> */}
         </>
     )
 }

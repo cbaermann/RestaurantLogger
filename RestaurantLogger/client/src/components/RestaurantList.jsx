@@ -37,6 +37,12 @@ const useStyles = makeStyles({
     },
 });
 
+const styles = {
+    buttonMargin: {
+        marginRight: "1rem"
+    }
+}
+
 export default props => {
     const [ restaurant, setRestaurant] = useState([]);
 
@@ -77,9 +83,9 @@ export default props => {
 
                                 <StyledTableCell key={idx}>{restaurant.foodType}</StyledTableCell>
 
-                                <StyledTableCell><Link to={"/restaurant/" + restaurant._id + "/edit"}><Button color="primary"
-                                variant="contained"
-                                size="small">Edit</Button></Link><DeleteButton restaurantId={restaurant._id} successCallback={()=>removeFromDom(restaurant._id)}></DeleteButton></StyledTableCell>
+                                <StyledTableCell>
+                                    <Button style={styles.buttonMargin}color="primary" variant="contained" size="small" href={"/restaurant/" + restaurant._id + "/edit"}>Edit</Button>
+                                <DeleteButton restaurantId={restaurant._id} successCallback={()=>removeFromDom(restaurant._id)}></DeleteButton></StyledTableCell>
                                 </>
                             </StyledTableRow>
                         )
