@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import {Link, navigate} from '@reach/router';
 import axios from 'axios';
 
+import Map from '../components/Map'
+
 export default props => {
     const[restaurant, setRestaurant] = useState({})
     useEffect( () => {
@@ -15,6 +17,7 @@ export default props => {
     }
 
     return(
+        <>
         <div>
             <h2>{restaurant.name}</h2>
             <p>Location: {restaurant.location}</p>
@@ -24,5 +27,7 @@ export default props => {
 
             <button onClick={onClickHandler}>Back to main page</button>
         </div>
+        <Map />
+        </>
     )
 }

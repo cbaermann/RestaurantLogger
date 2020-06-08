@@ -26,7 +26,10 @@ const styles = {
     priceRangeWidth: {
         marginTop: "1rem",
         // width: "200px"
-    }
+    },
+    tableCellStyle: {
+        opacity: "75%",
+        }
 }
 
 export default props => {
@@ -50,7 +53,7 @@ export default props => {
 
     return(
         <>
-        <Paper elevation={3} style={styles.paper} style={styles.topInput}>
+        <Paper elevation={3} style={styles.paper} style={styles.topInput} style={styles.tableCellStyle}>
             <br/>
             <form onSubmit={onSubmitHandler} style={styles.topInput}>
                 <FormControl variant="outlined" style={styles.input}>
@@ -94,10 +97,6 @@ export default props => {
                             <MenuItem value={"Thai"}>Thai</MenuItem>
                             <MenuItem value={"Tun Tavern"}>Tun Tavern</MenuItem>
                     </Select>
-                    {/* <OutlinedInput
-                        type="text"
-                        name="foodType" value={foodType}
-                        onChange={(e)=>{setFoodType(e.target.value) }}/> */}
                 </FormControl><br/>
                 <FormControl variant="outlined" style={styles.input}>
                     <InputLabel>Price Range:</InputLabel><br/>
@@ -113,7 +112,7 @@ export default props => {
                         name="priceRange" value={priceRange}
                         onChange={(e)=>{setPriceRange(e.target.value) }}/> */}
                 </FormControl><br/><br/>
-                <Button color="secondary" variant="contained" onClick={onClickHandler}>Cancel</Button>
+                <Button color="secondary" variant="contained" onClick={onClickHandler}>Cancel</Button><br/><br/>
                 <Button type="submit" variant="contained" color="primary">Submit</Button><br/><br/><br/>
             </form>
         </Paper>

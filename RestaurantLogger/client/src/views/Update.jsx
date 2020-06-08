@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { navigate } from '@reach/router';
 import RestaurantForm from '../components/RestaurantForm';
-import DeleteButton from '../components/DeleteButton';
+import '../style/UpdateStyle.css'
+
+
 
 export default props => {
     const { id } = props;
@@ -23,8 +25,8 @@ export default props => {
             .then(navigate("/restaurant/"));
     }
     return(
-        <div>
-            <h3>Update a Restaurant</h3>
+        <div className="UpdateContainer">
+            <h3 className="updateH3">Update a Restaurant</h3>
             {loaded && (
                 <>
                     <RestaurantForm

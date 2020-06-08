@@ -1,0 +1,14 @@
+.UpdateContainer{
+    background: url('../image/NewEdit.jpeg') no-repeat center fixed;
+    background-size: cover;
+    min-width: 1024px;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+
+    position: fixed;
+}
+
+.updateH3{
+    color: white;
+}
