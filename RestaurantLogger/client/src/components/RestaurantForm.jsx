@@ -58,13 +58,16 @@ export default props => {
                     <br/>
                     <OutlinedInput
                         type="text"
+                        required id="standard-required"
                         name="name" value={name}
+                        label={"required"}
                         onChange={(e)=>{setName(e.target.value) }}/>
                 </FormControl><br/>
                 <FormControl variant="outlined" style={styles.input}>
                     <InputLabel>Location:</InputLabel><br/>
                     <OutlinedInput
                         type="text"
+                        required id="standard-required"
                         name="location" value={location}
                         onChange={(e)=>{setLocation(e.target.value) }}/>
                 </FormControl><br/>
@@ -72,6 +75,7 @@ export default props => {
                     <InputLabel>Description:</InputLabel><br/>
                     <OutlinedInput
                         type="text"
+                        required id="standard-required"
                         name="description" value={description}
                         onChange={(e)=>{setDescription(e.target.value) }}/>
                 </FormControl><br/>
