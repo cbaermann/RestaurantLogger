@@ -5,6 +5,8 @@ const logger = require('./server/logging/logger');
 
 
 require('./server/config/mongoose.config');
+require('dotenv').config();
+
 
 app.use(cors());
 app.use(express.json());

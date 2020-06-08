@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import RestaurantForm from '../components/RestaurantForm';
 import { navigate } from '@reach/router';
+import '../style/NewStyle.css'
+
 
 export default () => {
     const [restaurant, setRestaurant] = useState([]);

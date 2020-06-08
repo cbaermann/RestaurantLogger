@@ -27,6 +27,9 @@ const styles = {
         marginTop: "1rem",
         // width: "200px"
     },
+    tableCellStyle: {
+        opacity: "75%",
+        }
 }
 
 export default props => {
@@ -50,7 +53,7 @@ export default props => {
 
     return(
         <>
-        <Paper elevation={3} style={styles.paper} style={styles.topInput}>
+        <Paper elevation={3} style={styles.paper} style={styles.topInput} style={styles.tableCellStyle}>
             <br/>
             <form onSubmit={onSubmitHandler} style={styles.topInput}>
                 <FormControl variant="outlined" style={styles.input}>
@@ -90,10 +93,6 @@ export default props => {
                             <MenuItem value={"Thai"}>Thai</MenuItem>
                             <MenuItem value={"Tun Tavern"}>Tun Tavern</MenuItem>
                     </Select>
-                    {/* <OutlinedInput
-                        type="text"
-                        name="foodType" value={foodType}
-                        onChange={(e)=>{setFoodType(e.target.value) }}/> */}
                 </FormControl><br/>
                 <FormControl variant="outlined" style={styles.input}>
                     <InputLabel>Price Range:</InputLabel><br/>
