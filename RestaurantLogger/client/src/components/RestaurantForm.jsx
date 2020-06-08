@@ -26,7 +26,7 @@ const styles = {
     priceRangeWidth: {
         marginTop: "1rem",
         // width: "200px"
-    }
+    },
 }
 
 export default props => {
@@ -109,7 +109,7 @@ export default props => {
                         name="priceRange" value={priceRange}
                         onChange={(e)=>{setPriceRange(e.target.value) }}/> */}
                 </FormControl><br/><br/>
-                <Button color="secondary" variant="contained" onClick={onClickHandler}>Cancel</Button>
+                <Button color="secondary" variant="contained" onClick={onClickHandler}>Cancel</Button><br/><br/>
                 <Button type="submit" variant="contained" color="primary">Submit</Button><br/><br/><br/>
             </form>
         </Paper>
