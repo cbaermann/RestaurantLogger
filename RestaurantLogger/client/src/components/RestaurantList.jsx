@@ -76,6 +76,7 @@ export default props => {
         setRestaurant([...restaurantSort]);
     }
 
+
     return(
         <div>
             <TableContainer style={styles.tableCellStyle} component={Paper}>
