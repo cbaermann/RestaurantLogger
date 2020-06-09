@@ -28,7 +28,7 @@ const StyledTableRow = withStyles((theme) => ({
     root: {
         '&:nth-of-type(odd)': {
         backgroundColor: theme.palette.action.hover,
-    },
+        },
     },
 }))(TableRow);
 const useStyles = makeStyles({
@@ -56,13 +56,25 @@ export default props => {
     }, [])
 
     const removeFromDom = restaurantId => {
-        setRestaurant(restaurant.filter(restaurant => restaurant._id != restaurantId))
+        setRestaurant(restaurant.filter(restaurant => restaurant._id !== restaurantId))
     }
 
     const classes = useStyles();
 
-
-
+    const comparatorSort = ({sortKey}) => {
+        const restaurantSort = restaurant.sort((first, second) => {
+            if (first[sortKey] < second[sortKey]) {
+                return -1;
+            }
+            else if (first[sortKey] > second[sortKey]) {
+                return 1;
+            }
+            else {
+                return 0;
+            }
+        });
+        setRestaurant([...restaurantSort]);
+    }
 
     return(
         <div>
@@ -70,10 +82,10 @@ export default props => {
             <Table className={classes.table}>
                 <TableHead>
                     <TableRow>
-                        <StyledTableCell>Name</StyledTableCell>
-                        <StyledTableCell>Location</StyledTableCell>
-                        <StyledTableCell>Food Type</StyledTableCell>
-                        <StyledTableCell>Price Range</StyledTableCell>
+                        <StyledTableCell onClick={ () => comparatorSort({sortKey: 'name'}) }>Name</StyledTableCell>
+                        <StyledTableCell onClick={ () => comparatorSort({sortKey: 'location'}) } >Location</StyledTableCell>
+                        <StyledTableCell onClick={ () => comparatorSort({sortKey: 'foodType'}) }>Food Type</StyledTableCell>
+                        <StyledTableCell onClick={ () => comparatorSort({sortKey: 'priceRange'}) }>Price Range</StyledTableCell>
                         <StyledTableCell>Actions</StyledTableCell>
                     </TableRow>
                 </TableHead>
@@ -91,8 +103,10 @@ export default props => {
                                 <StyledTableCell key={idx}>{restaurant.priceRange}</StyledTableCell>
 
                                 <StyledTableCell>
-                                    <Button style={styles.buttonMargin}color="primary" variant="contained" size="small" href={"/restaurant/" + restaurant._id + "/edit"}>Edit</Button>
-                                <DeleteButton restaurantId={restaurant._id} successCallback={()=>removeFromDom(restaurant._id)}></DeleteButton></StyledTableCell>
+                                    <Button style={styles.buttonMargin}
+                                            color="primary" variant="contained"
+                                            size="small" href={"/restaurant/" + restaurant._id + "/edit"}>Edit</Button>
+                                <DeleteButton restaurantId={restaurant._id} successCallback={() => removeFromDom(restaurant._id)}/></StyledTableCell>
                                 </>
                             </StyledTableRow>
                         )
