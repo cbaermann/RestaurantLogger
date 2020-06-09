@@ -19,7 +19,6 @@
 }
 
 .detailContainer{
-    background: url('../image/NewEdit.jpeg') no-repeat center fixed;
     background-size: cover;
     min-width: 1024px;
     min-height: 100%;

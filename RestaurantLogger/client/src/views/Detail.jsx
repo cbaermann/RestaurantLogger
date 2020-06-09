@@ -4,7 +4,9 @@ import axios from 'axios';
 import { Button } from '@material-ui/core';
 import '../style/DetailStyle.css'
 
-
+import BarBackgroundImage from '../image/BarBackgroundImage.jpeg';
+import MexicanFoodBackgroundImage from '../image/MexicanFoodBackgroundImage.jpeg';
+import AmericanFoodBackgroundImage from '../image/AmericanFoodBackgroundImage.jpeg'
 import Map from '../components/Map'
 
 
@@ -26,13 +28,13 @@ export default props => {
     const renderSwitch = (backgroundImage) => {
         switch(restaurant.foodType){
             case "Bar":
-                backgroundImage = 'url(https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1867&q=80';
+                backgroundImage = `url(${BarBackgroundImage})`
                 break;
             case "Mexican":
-                backgroundImage = 'url(https://images.unsplash.com/photo-1543352634-99a5d50ae78e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80)';
+                backgroundImage = `url(${MexicanFoodBackgroundImage})`
                 break;
             case "American":
-                backgroundImage = 'url(https://images.unsplash.com/photo-1571805618149-3a772570ebcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80)';
+                backgroundImage = `url(${AmericanFoodBackgroundImage})`
                 break;
             case "Chinese":
                 // Needs New Image
@@ -93,8 +95,8 @@ export default props => {
                 <p>Description: {restaurant.description}</p>
                 <p>Food Type: {restaurant.foodType}</p>
                 <p>Price Range: {restaurant.priceRange}</p>
-        </div>
             <Button variant="contained" color="primary" onClick={onClickHandler}>Back to main page</Button><br/><br/>
+        </div>
             <div className="mapContainer">
                 <Map />
             </div>
