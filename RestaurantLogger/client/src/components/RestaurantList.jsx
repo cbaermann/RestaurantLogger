@@ -63,10 +63,10 @@ export default props => {
 
     const comparatorSort = ({sortKey}) => {
         const restaurantSort = restaurant.sort((first, second) => {
-            if (first[sortKey] < second[sortKey]) {
+            if (first[sortKey].toUpperCase() < second[sortKey].toUpperCase()) {
                 return -1;
             }
-            else if (first[sortKey] > second[sortKey]) {
+            else if (first[sortKey].toUpperCase() > second[sortKey].toUpperCase()) {
                 return 1;
             }
             else {
