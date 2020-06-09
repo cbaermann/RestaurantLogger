@@ -68,6 +68,18 @@ export default props => {
                 }
             return backgroundImage;
     }
+
+    const styles = {
+        detailContainerStyle: {
+            backgroundSize: "cover",
+            minWidth: 1024,
+            minHeight: "100%",
+            width: "100%",
+            height: "auto",
+            position: "fixed",
+
+        }
+    }
                 
     
 
@@ -75,7 +87,8 @@ export default props => {
     return(
         <>
 
-        <div style={{backgroundImage: renderSwitch()}} className="detailContainer">
+        <div style={{backgroundImage: renderSwitch()}}
+        className="detailContainer">
         <div className="details">
                 <h2>{restaurant.name}</h2>
                 <p>Location: {restaurant.location}</p>
