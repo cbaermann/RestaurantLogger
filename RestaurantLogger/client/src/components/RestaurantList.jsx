@@ -43,7 +43,10 @@ const styles = {
     },
 
     tableCellStyle: {
-        opacity: "85%"
+        opacity: "85%",
+        overflow: "auto",
+        height: "27rem"
+        
         }
 }
 
