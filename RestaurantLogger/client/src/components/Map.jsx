@@ -16,13 +16,13 @@ export default props => {
       // Important! Always set the container height explicitly
         <div style={{ height: '50vh', width: '50%' }}>
             <GoogleMapReact
-                bootstrapURLKeys={{ key: 'AIzaSyA9KDmGbMElHLCnLNiNWzSq3mmWLwqmVKw'}}
+                bootstrapURLKeys={{ key: ''}}
             defaultCenter={defaultProps.center}
             defaultZoom={defaultProps.zoom}
         >
         <AnyReactComponent
-            lat={59.955413}
-            lng={30.337844}
+            lat={47.6062}
+            lng={-122.3321}
             text="My Marker"
         />
         </GoogleMapReact>
