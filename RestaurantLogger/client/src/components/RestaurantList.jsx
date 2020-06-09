@@ -27,7 +27,7 @@ const StyledTableCell = withStyles((theme) => ({
 const StyledTableRow = withStyles((theme) => ({
     root: {
         '&:nth-of-type(odd)': {
-        backgroundColor: theme.palette.action.hover,
+        backgroundColor: "#eee",
         },
     },
 }))(TableRow);
@@ -47,7 +47,8 @@ const styles = {
         overflow: "auto",
         height: "27rem"
         
-        }
+    },
+    
 }
 
 export default props => {

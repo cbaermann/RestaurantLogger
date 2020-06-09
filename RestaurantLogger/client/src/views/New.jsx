@@ -17,8 +17,8 @@ export default () => {
     }
 
     return(
-        <div>
-            <h3>Add a new restaurant</h3>
+        <div className="newContainer">
+            <h3 className="newH3">Add a new restaurant</h3>
             <RestaurantForm onSubmitProp={createRestaurant}
             initialName=""
             initialLocation=""
