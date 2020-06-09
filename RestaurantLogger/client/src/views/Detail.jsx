@@ -7,6 +7,13 @@ import '../style/DetailStyle.css'
 import BarBackgroundImage from '../image/BarBackgroundImage.jpeg';
 import MexicanFoodBackgroundImage from '../image/MexicanFoodBackgroundImage.jpeg';
 import AmericanFoodBackgroundImage from '../image/AmericanFoodBackgroundImage.jpeg'
+import ChineseFoodBackgroundImage from '../image/ChineseFoodBackgroundImage.jpeg'
+import FusionFoodBackgroundImage from '../image/FusionFoodBackgroundImage.jpeg'
+import IndianFoodBackgroundImage from '../image/IndianFoodBackgroundImage.jpeg'
+import ItalianFoodBackgroundImage from '../image/ItalianFoodBackgroundImage.jpeg'
+import SeafoodBackgroundImage from '../image/SeafoodBackgroundImage.jpeg'
+import ThaiFoodBackgroundImage from '../image/ThaiFoodBackgroundImage.jpeg'
+import TunTavernBackgroundImage from '../image/TunTavernBackgroundImage.jpeg'
 import Map from '../components/Map'
 
 
@@ -37,32 +44,25 @@ export default props => {
                 backgroundImage = `url(${AmericanFoodBackgroundImage})`
                 break;
             case "Chinese":
-                // Needs New Image
-                backgroundImage = 'url(https://images.unsplash.com/photo-1571805618149-3a772570ebcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80)';
+                backgroundImage = `url(${ChineseFoodBackgroundImage})`
                 break;
             case "Fusion":
-                // Needs New Image
-                backgroundImage = 'url(https://images.unsplash.com/photo-1571805618149-3a772570ebcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80)';
+                backgroundImage = `url(${FusionFoodBackgroundImage})`;
                 break;
             case "Indian":
-                // Needs New Image
-                backgroundImage = 'url(https://images.unsplash.com/photo-1571805618149-3a772570ebcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80)';
+                backgroundImage = `url(${IndianFoodBackgroundImage})`
                 break;
             case "Italian":
-                // Needs New Image
-                backgroundImage = 'url(https://images.unsplash.com/photo-1571805618149-3a772570ebcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80)';
+                backgroundImage = `url(${ItalianFoodBackgroundImage})`
                 break;
             case "Seafood":
-                // Needs New Image
-                backgroundImage = 'url(https://images.unsplash.com/photo-1571805618149-3a772570ebcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80)';
+                backgroundImage = `url(${SeafoodBackgroundImage})`
                 break;
             case "Thai":
-                // Needs New Image
-                backgroundImage = 'url(https://images.unsplash.com/photo-1571805618149-3a772570ebcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80)';
+                backgroundImage = `url(${ThaiFoodBackgroundImage})`
                 break;
             case "Tun Tavern":
-                // Needs New Image
-                backgroundImage = 'url(https://images.unsplash.com/photo-1571805618149-3a772570ebcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80)';
+                backgroundImage = `url(${TunTavernBackgroundImage})`
                 break;
             default:
                 console.error("Something Broke");
