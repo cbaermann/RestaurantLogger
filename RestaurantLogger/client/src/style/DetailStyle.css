@@ -1,0 +1,15 @@
+.detailContainer p {
+    margin-bottom: 10px;
+    
+}
+
+.detailContainer h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.mapContainer{
+    margin: auto;
+    width: 50%;
+}

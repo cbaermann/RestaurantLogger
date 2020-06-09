@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import {Link, navigate} from '@reach/router';
 import axios from 'axios';
+import '../style/DetailStyle.css'
+
 
 import Map from '../components/Map'
 
@@ -18,7 +20,7 @@ export default props => {
 
     return(
         <>
-        <div>
+        <div className="detailContainer">
             <h2>{restaurant.name}</h2>
             <p>Location: {restaurant.location}</p>
             <p>Description: {restaurant.description}</p>
@@ -26,7 +28,9 @@ export default props => {
             <p>Price Range: {restaurant.priceRange}</p>
 
             <button onClick={onClickHandler}>Back to main page</button><br/><br/>
-            <Map />
+            <div className="mapContainer">
+                <Map />
+            </div>
         </div>
         </>
     )
