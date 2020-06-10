@@ -15,5 +15,5 @@ app.use(logger);
 require('./server/routes/restaurant.routes')(app);
 
 app.listen(8000, () => {
-    console.log("You are now listening on port 8000")
+    console.log("You are now listening on port 8000");
 })

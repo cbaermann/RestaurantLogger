@@ -29,7 +29,7 @@ const styles = {
     },
     tableCellStyle: {
         opacity: "75%",
-        }
+    }
 }
 
 export default props => {
@@ -53,7 +53,7 @@ export default props => {
 
     return(
         <>
-        <Paper elevation={3} style={styles.paper} style={styles.topInput} style={styles.tableCellStyle}>
+        <Paper elevation={3} style={styles.tableCellStyle}>
             <br/>
             <form onSubmit={onSubmitHandler} style={styles.topInput}>
                 <FormControl variant="outlined" style={styles.input}>
@@ -65,7 +65,8 @@ export default props => {
                         name="name" value={name}
                         label={"required"}
                         onChange={(e)=>{setName(e.target.value) }}/>
-                </FormControl><br/>
+                </FormControl>
+                <br/>
                 <FormControl variant="outlined" style={styles.input}>
                     <InputLabel>Location:</InputLabel><br/>
                     <OutlinedInput
@@ -73,7 +74,8 @@ export default props => {
                         required id="standard-required"
                         name="location" value={location}
                         onChange={(e)=>{setLocation(e.target.value) }}/>
-                </FormControl><br/>
+                </FormControl>
+                <br/>
                 <FormControl variant="outlined" style={styles.input}>
                     <InputLabel>Description:</InputLabel><br/>
                     <OutlinedInput
@@ -81,7 +83,8 @@ export default props => {
                         required id="standard-required"
                         name="description" value={description}
                         onChange={(e)=>{setDescription(e.target.value) }}/>
-                </FormControl><br/>
+                </FormControl>
+                <br/>
                 <FormControl variant="outlined" style={styles.input}>
                     <InputLabel>FoodType:</InputLabel><br/>
                     <Select name="foodType" value={foodType}
@@ -97,12 +100,13 @@ export default props => {
                             <MenuItem value={"Thai"}>Thai</MenuItem>
                             <MenuItem value={"Tun Tavern"}>Tun Tavern</MenuItem>
                     </Select>
-                </FormControl><br/>
+                </FormControl>
+                <br/>
                 <FormControl variant="outlined" style={styles.input}>
                     <InputLabel>Price Range:</InputLabel><br/>
                     
                     <Select name="priceRange" value={priceRange}
-                        onChange={(e)=>setPriceRange(e.target.value)}>
+                        onChange={(e)=>{setPriceRange(e.target.value)}}>
                         <MenuItem value={"Cheap"}>Cheap</MenuItem>
                         <MenuItem value={"Average"}>Average</MenuItem>
                         <MenuItem value={"Expensive"}>Expensive</MenuItem>
@@ -111,9 +115,16 @@ export default props => {
                         type="text"
                         name="priceRange" value={priceRange}
                         onChange={(e)=>{setPriceRange(e.target.value) }}/> */}
-                </FormControl><br/><br/>
-                <Button color="secondary" variant="contained" onClick={onClickHandler}>Cancel</Button><br/><br/>
-                <Button type="submit" variant="contained" color="primary">Submit</Button><br/><br/><br/>
+                </FormControl>
+                <br/>
+                <br/>
+                <Button color="secondary" variant="contained" onClick={onClickHandler}>Cancel</Button>
+                <br/>
+                <br/>
+                <Button type="submit" variant="contained" color="primary">Submit</Button
+                ><br/>
+                <br/>
+                <br/>
             </form>
         </Paper>
         </>

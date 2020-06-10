@@ -5,7 +5,6 @@ import RestaurantList from '../components/RestaurantList';
 
 import '../style/MainStyle.css'
 
-
 const styles = {
     addButton: {
         backgroundColor: "#408a24",
@@ -27,13 +26,17 @@ export default() => {
     }, [])
 
     const removeFromDom = restaurantId => {
-        setRestaurant(restaurant.filter(restaurant=> restaurant._id != restaurantId));
+        setRestaurant(restaurant.filter(restaurant=> restaurant._id !== restaurantId));
     }
 
     return(
         <div className="mainContainer">
             <h1>Your Favorite Restaurants</h1>
-            <Button className="newRestaurantButton" style={styles.addButton} variant="contained" href='/new'>Add a new restaurant</Button>
+            <Button
+                className="newRestaurantButton"
+                style={styles.addButton}
+                variant="contained"
+                href='/new'>Add a new restaurant</Button>
             {loaded && <RestaurantList restaurant={restaurant} removeFromDom={removeFromDom} />}
         </div>
     )

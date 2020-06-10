@@ -31,6 +31,7 @@ const StyledTableRow = withStyles((theme) => ({
         },
     },
 }))(TableRow);
+
 const useStyles = makeStyles({
     table: {
         minWidth: 700,
@@ -53,17 +54,16 @@ const styles = {
 
 export default props => {
     const [ restaurant, setRestaurant] = useState([]);
+    const classes = useStyles();
 
     useEffect( () => {
         axios.get('http://localhost:8000/api/restaurant')
             .then(res => setRestaurant(res.data));
-    }, [])
+    }, []);
 
     const removeFromDom = restaurantId => {
         setRestaurant(restaurant.filter(restaurant => restaurant._id !== restaurantId))
     }
-
-    const classes = useStyles();
 
     const comparatorSort = ({sortKey}) => {
         const restaurantSort = restaurant.sort((first, second) => {
@@ -79,7 +79,6 @@ export default props => {
         });
         setRestaurant([...restaurantSort]);
     }
-
 
     return(
         <div>

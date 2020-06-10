@@ -7,11 +7,10 @@ export default () => {
     return(
         <>
         <div className="container">
-            <img className="landingImage" src={require('../image/logo.png')}></img><br/>
+            <img className="landingImage" src={require('../image/logo.png')} alt={'application logo'}/><br/>
             <Button className="siteButton" href="/restaurant"
             color="default"
             variant="contained">Go To Site</Button>
-            
         </div>
         </>
     )

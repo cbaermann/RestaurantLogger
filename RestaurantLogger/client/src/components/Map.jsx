@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import GoogleMapReact from 'google-map-react';
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
-const superSecretStuff = process.env.REACT_APP_GOOGLE_API_KEY;
-// class SimpleMap extends Component {
-    const defaultProps = {
+
+const defaultProps = {
     center: {
         lat: 47.6062,
         lng: -122.3321
     },
     zoom: 11
 };
+
 export default props => {
 
     return (
@@ -28,6 +28,4 @@ export default props => {
         </GoogleMapReact>
     </div>
     );
-    
 }
-// export default SimpleMap;

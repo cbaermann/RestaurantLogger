@@ -4,8 +4,6 @@ import { navigate } from '@reach/router';
 import RestaurantForm from '../components/RestaurantForm';
 import '../style/UpdateStyle.css'
 
-
-
 export default props => {
     const { id } = props;
     const [restaurant, setRestaurant] = useState();
@@ -17,13 +15,14 @@ export default props => {
                 setRestaurant(res.data);
                 setLoaded(true);
             })
-    }, [])
+    });
 
     const updateRestaurant = restaurant => {
         axios.put('http://localhost:8000/api/restaurant/' + id, restaurant)
             // .then(res => console.log(res))
             .then(navigate("/restaurant/"));
     }
+
     return(
         <div className="UpdateContainer">
             <h3 className="updateH3">Update a Restaurant</h3>
