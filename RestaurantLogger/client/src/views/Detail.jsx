@@ -82,7 +82,6 @@ export default props => {
         className="detailContainer">
             <Box component="div" display="block" borderBottom={1}
             style={styles.boxStyle}>
-        {/* <div className="details"> */}
                 <h2>{restaurant.name}</h2>
                 <p>Location: {restaurant.location}</p>
                 <p>Description: {restaurant.description}</p>
@@ -91,7 +90,6 @@ export default props => {
             <Button variant="contained" color="primary" onClick={onClickHandler}>Back to main page</Button>
             <br/>
             <br/>
-        {/* </div> */}
         </Box>
             <div className="mapContainer">
                 <Map />

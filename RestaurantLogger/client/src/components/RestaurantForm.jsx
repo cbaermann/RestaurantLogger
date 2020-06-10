@@ -20,12 +20,8 @@ const styles = {
     topInput: {
         marginTop: "1rem"
     },
-    foodTypeWidth: {
-        // width: "200px",
-    },
     priceRangeWidth: {
         marginTop: "1rem",
-        // width: "200px"
     },
     tableCellStyle: {
         opacity: "75%",

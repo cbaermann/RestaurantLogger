@@ -19,7 +19,6 @@ export default props => {
 
     const updateRestaurant = restaurant => {
         axios.put('http://localhost:8000/api/restaurant/' + id, restaurant)
-            // .then(res => console.log(res))
             .then(navigate("/restaurant/"));
     }
 
