@@ -13,7 +13,7 @@ export default () => {
             .then(res=> {
                 setRestaurant([...restaurant, res.data]);
                 navigate("/restaurant");
-            })
+            });
     }
 
     return(
