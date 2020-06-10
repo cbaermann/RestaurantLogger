@@ -102,13 +102,13 @@ export default props => {
                                 <>
                                 <StyledTableCell key={idx}><Link to={"/restaurant/" + restaurant._id}>{restaurant.name}</Link></StyledTableCell>
 
-                                <StyledTableCell key={idx}>{restaurant.location}</StyledTableCell>
+                                <StyledTableCell key={idx + 1}>{restaurant.location}</StyledTableCell>
 
-                                <StyledTableCell key={idx}>{restaurant.foodType}</StyledTableCell>
+                                <StyledTableCell key={idx + 2}>{restaurant.foodType}</StyledTableCell>
 
-                                <StyledTableCell key={idx}>{restaurant.priceRange}</StyledTableCell>
+                                <StyledTableCell key={idx + 3}>{restaurant.priceRange}</StyledTableCell>
 
-                                <StyledTableCell>
+                                <StyledTableCell key={idx + 4}>
                                     <Button style={styles.buttonMargin}
                                     startIcon={<EditIcon />}
                                             color="primary" variant="contained"
