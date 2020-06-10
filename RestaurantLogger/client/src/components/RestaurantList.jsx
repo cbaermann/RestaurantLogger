@@ -96,17 +96,17 @@ export default props => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {restaurant.map((restaurant, idx)=> {
+                    {restaurant.map((restaurant, idx )=> {
                         return(
                             <StyledTableRow>
                                 <>
-                                <StyledTableCell key={idx}><Link to={"/restaurant/" + restaurant._id}>{restaurant.name}</Link></StyledTableCell>
+                                <StyledTableCell key={idx+1}><Link to={"/restaurant/" + restaurant._id}>{restaurant.name}</Link></StyledTableCell>
 
-                                <StyledTableCell key={idx}>{restaurant.location}</StyledTableCell>
+                                <StyledTableCell key={idx+2}>{restaurant.location}</StyledTableCell>
 
-                                <StyledTableCell key={idx}>{restaurant.foodType}</StyledTableCell>
+                                <StyledTableCell key={idx+3}>{restaurant.foodType}</StyledTableCell>
 
-                                <StyledTableCell key={idx}>{restaurant.priceRange}</StyledTableCell>
+                                <StyledTableCell key={idx+4}>{restaurant.priceRange}</StyledTableCell>
 
                                 <StyledTableCell>
                                     <Button style={styles.buttonMargin}
