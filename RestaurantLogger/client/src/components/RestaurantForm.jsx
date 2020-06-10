@@ -53,7 +53,7 @@ export default props => {
 
     return(
         <>
-        <Paper elevation={3} style={styles.paper} style={styles.topInput} style={styles.tableCellStyle}>
+        <Paper elevation={3} style={styles.tableCellStyle}>
             <br/>
             <form onSubmit={onSubmitHandler} style={styles.topInput}>
                 <FormControl variant="outlined" style={styles.input}>

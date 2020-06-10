@@ -22,7 +22,7 @@ export default props => {
     useEffect( () => {
         axios.get("http://localhost:8000/api/restaurant/" + props.id)
         .then(res => setRestaurant(res.data));
-    }, [])
+    });
     
     const onClickHandler = e => {
         e.preventDefault();
@@ -62,7 +62,6 @@ export default props => {
                 backgroundImage = `url(${TunTavernBackgroundImage})`;
                 break;
             default:
-                console.error("Something Broke");
                 break;
         }
         return backgroundImage;

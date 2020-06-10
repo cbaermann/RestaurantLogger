@@ -59,7 +59,7 @@ export default props => {
     useEffect( () => {
         axios.get('http://localhost:8000/api/restaurant')
             .then(res => setRestaurant(res.data));
-    }, [])
+    }, []);
 
     const removeFromDom = restaurantId => {
         setRestaurant(restaurant.filter(restaurant => restaurant._id !== restaurantId))
