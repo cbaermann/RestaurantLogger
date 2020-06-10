@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from '@reach/router';
 import DeleteButton from './DeleteButton';
+import EditIcon from '@material-ui/icons/Edit';
+
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import {
     Table,
@@ -108,6 +110,7 @@ export default props => {
 
                                 <StyledTableCell>
                                     <Button style={styles.buttonMargin}
+                                    startIcon={<EditIcon />}
                                             color="primary" variant="contained"
                                             size="small" href={"/restaurant/" + restaurant._id + "/edit"}>Edit</Button>
                                             

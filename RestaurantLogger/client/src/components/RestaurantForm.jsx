@@ -111,10 +111,6 @@ export default props => {
                         <MenuItem value={"Average"}>Average</MenuItem>
                         <MenuItem value={"Expensive"}>Expensive</MenuItem>
                     </Select>
-                    {/* <OutlinedInput
-                        type="text"
-                        name="priceRange" value={priceRange}
-                        onChange={(e)=>{setPriceRange(e.target.value) }}/> */}
                 </FormControl>
                 <br/>
                 <br/>
