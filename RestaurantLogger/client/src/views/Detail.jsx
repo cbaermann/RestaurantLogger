@@ -30,7 +30,7 @@ export default props => {
     useEffect( () => {
         axios.get("http://localhost:8000/api/restaurant/" + props.id)
         .then(res => setRestaurant(res.data));
-    });
+    }, []);
     
     const onClickHandler = e => {
         e.preventDefault();

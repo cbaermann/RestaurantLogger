@@ -23,7 +23,7 @@ export default() => {
                 setRestaurant(res.data);
                 setLoaded(true);
             });
-    }, [])
+    }, []);
 
     const removeFromDom = restaurantId => {
         setRestaurant(restaurant.filter(restaurant=> restaurant._id !== restaurantId));

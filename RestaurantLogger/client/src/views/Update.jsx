@@ -15,7 +15,7 @@ export default props => {
                 setRestaurant(res.data);
                 setLoaded(true);
             })
-    });
+    }, []);
 
     const updateRestaurant = restaurant => {
         axios.put('http://localhost:8000/api/restaurant/' + id, restaurant)
