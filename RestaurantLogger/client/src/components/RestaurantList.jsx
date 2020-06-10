@@ -111,6 +111,7 @@ export default props => {
                                     <Button style={styles.buttonMargin}
                                             color="primary" variant="contained"
                                             size="small" href={"/restaurant/" + restaurant._id + "/edit"}>Edit</Button>
+                                            
                                 <DeleteButton restaurantId={restaurant._id} successCallback={() => removeFromDom(restaurant._id)}/></StyledTableCell>
                                 </>
                             </StyledTableRow>

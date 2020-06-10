@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {Link, navigate} from '@reach/router';
 import axios from 'axios';
-import { Button } from '@material-ui/core';
+import { Button, Box } from '@material-ui/core';
 import '../style/DetailStyle.css'
 
 import BarBackgroundImage from '../image/BarBackgroundImage.jpeg';
@@ -16,7 +16,12 @@ import ThaiFoodBackgroundImage from '../image/ThaiFoodBackgroundImage.jpeg'
 import TunTavernBackgroundImage from '../image/TunTavernBackgroundImage.jpeg'
 import Map from '../components/Map'
 
-
+const styles = {
+    boxStyle: {
+        backgroundColor: "whitesmoke",
+        opacity: "80%"
+    }
+}
 
 
 export default props => {
@@ -71,32 +76,25 @@ export default props => {
             return backgroundImage;
     }
 
-    const styles = {
-        detailContainerStyle: {
-            backgroundSize: "cover",
-            minWidth: 1024,
-            minHeight: "100%",
-            width: "100%",
-            height: "auto",
-            position: "fixed",
-
-        }
-    }
-
 
     return(
         <>
 
         <div style={{backgroundImage: renderSwitch()}}
         className="detailContainer">
-        <div className="details">
+            <Box component="div" display="block" borderBottom={1}
+            style={styles.boxStyle}>
+        {/* <div className="details"> */}
                 <h2>{restaurant.name}</h2>
                 <p>Location: {restaurant.location}</p>
                 <p>Description: {restaurant.description}</p>
                 <p>Food Type: {restaurant.foodType}</p>
                 <p>Price Range: {restaurant.priceRange}</p>
-            <Button variant="contained" color="primary" onClick={onClickHandler}>Back to main page</Button><br/><br/>
-        </div>
+            <Button variant="contained" color="primary" onClick={onClickHandler}>Back to main page</Button>
+            <br/>
+            <br/>
+        {/* </div> */}
+        </Box>
             <div className="mapContainer">
                 <Map />
             </div>
