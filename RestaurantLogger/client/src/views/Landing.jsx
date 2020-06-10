@@ -11,7 +11,6 @@ export default () => {
             <Button className="siteButton" href="/restaurant"
             color="default"
             variant="contained">Go To Site</Button>
-            
         </div>
         </>
     )

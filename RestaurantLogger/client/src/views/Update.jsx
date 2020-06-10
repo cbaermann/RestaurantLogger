@@ -4,8 +4,6 @@ import { navigate } from '@reach/router';
 import RestaurantForm from '../components/RestaurantForm';
 import '../style/UpdateStyle.css'
 
-
-
 export default props => {
     const { id } = props;
     const [restaurant, setRestaurant] = useState();
@@ -24,6 +22,7 @@ export default props => {
             // .then(res => console.log(res))
             .then(navigate("/restaurant/"));
     }
+
     return(
         <div className="UpdateContainer">
             <h3 className="updateH3">Update a Restaurant</h3>

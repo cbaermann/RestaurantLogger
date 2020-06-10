@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {Link, navigate} from '@reach/router';
+import {navigate} from '@reach/router';
 import axios from 'axios';
 import { Button } from '@material-ui/core';
 import '../style/DetailStyle.css'
@@ -16,15 +16,12 @@ import ThaiFoodBackgroundImage from '../image/ThaiFoodBackgroundImage.jpeg'
 import TunTavernBackgroundImage from '../image/TunTavernBackgroundImage.jpeg'
 import Map from '../components/Map'
 
-
-
-
 export default props => {
-    
-    const[restaurant, setRestaurant] = useState({})
+    const[restaurant, setRestaurant] = useState({});
+
     useEffect( () => {
         axios.get("http://localhost:8000/api/restaurant/" + props.id)
-        .then(res => setRestaurant(res.data))
+        .then(res => setRestaurant(res.data));
     }, [])
     
     const onClickHandler = e => {
@@ -35,40 +32,40 @@ export default props => {
     const renderSwitch = (backgroundImage) => {
         switch(restaurant.foodType){
             case "Bar":
-                backgroundImage = `url(${BarBackgroundImage})`
+                backgroundImage = `url(${BarBackgroundImage})`;
                 break;
             case "Mexican":
-                backgroundImage = `url(${MexicanFoodBackgroundImage})`
+                backgroundImage = `url(${MexicanFoodBackgroundImage})`;
                 break;
             case "American":
-                backgroundImage = `url(${AmericanFoodBackgroundImage})`
+                backgroundImage = `url(${AmericanFoodBackgroundImage})`;
                 break;
             case "Chinese":
-                backgroundImage = `url(${ChineseFoodBackgroundImage})`
+                backgroundImage = `url(${ChineseFoodBackgroundImage})`;
                 break;
             case "Fusion":
                 backgroundImage = `url(${FusionFoodBackgroundImage})`;
                 break;
             case "Indian":
-                backgroundImage = `url(${IndianFoodBackgroundImage})`
+                backgroundImage = `url(${IndianFoodBackgroundImage})`;
                 break;
             case "Italian":
-                backgroundImage = `url(${ItalianFoodBackgroundImage})`
+                backgroundImage = `url(${ItalianFoodBackgroundImage})`;
                 break;
             case "Seafood":
-                backgroundImage = `url(${SeafoodBackgroundImage})`
+                backgroundImage = `url(${SeafoodBackgroundImage})`;
                 break;
             case "Thai":
-                backgroundImage = `url(${ThaiFoodBackgroundImage})`
+                backgroundImage = `url(${ThaiFoodBackgroundImage})`;
                 break;
             case "Tun Tavern":
-                backgroundImage = `url(${TunTavernBackgroundImage})`
+                backgroundImage = `url(${TunTavernBackgroundImage})`;
                 break;
             default:
                 console.error("Something Broke");
                 break;
-                }
-            return backgroundImage;
+        }
+        return backgroundImage;
     }
 
     const styles = {
@@ -79,14 +76,11 @@ export default props => {
             width: "100%",
             height: "auto",
             position: "fixed",
-
         }
     }
 
-
     return(
         <>
-
         <div style={{backgroundImage: renderSwitch()}}
         className="detailContainer">
         <div className="details">
