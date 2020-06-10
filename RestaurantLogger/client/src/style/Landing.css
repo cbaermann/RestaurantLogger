@@ -1,9 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-    /* height: 100%; */
 }
-
 
 .container{
     background: url('../image/LandingImg.jpg') no-repeat center fixed;
@@ -12,7 +10,6 @@
     min-height: 100%;
     width: 100%;
     height: auto;
-
     position: fixed;
 }
 
@@ -25,11 +22,7 @@
 
 .siteButton{
     margin: auto;
-    /* height: 50%;
-    width: 50%; */
     display: inline-block;
     justify-content: center;
     align-items: center;
-
-
 }
